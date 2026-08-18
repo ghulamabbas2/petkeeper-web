@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account & Data Deletion — PetKeeper (com.forneex.petkeeper)</title>
+  <meta name="description" content="Request permanent account deletion and data purge for PetKeeper Android app. Compliant with Google Play Console Data Safety requirements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">🐾</div>
+        <span>PetKeeper</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#features" class="nav-link">Features</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="delete-account.html" class="nav-link active">Delete Account</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" class="nav-btn" target="_blank" rel="noopener noreferrer">Get App</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container container-prose">
+      <div class="badge-pill" style="background-color: var(--rose-light); color: var(--rose);">
+        <span>⚠️</span> Google Play Data Safety Portal
+      </div>
+      <h1>Account & Data Deletion Request</h1>
+      <p>We respect your privacy and data ownership. You have full control to permanently delete your PetKeeper account, pet profiles, and all associated cloud files.</p>
+      <div class="page-meta">
+        <span><strong>Application:</strong> PetKeeper (com.forneex.petkeeper)</span>
+        <span>&bull;</span>
+        <span><strong>Developer:</strong> Forneex</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <section class="policy-body">
+    <div class="container container-prose">
+      <div class="policy-content">
+
+        <h2>Method 1: Instant In-App Deletion (Recommended)</h2>
+        <p>If you currently have the PetKeeper app installed on your Android device, you can permanently delete your account and all data in real-time:</p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Open Settings</h3>
+            <p>Launch PetKeeper and tap the <strong>Settings</strong> gear icon on the top right bar or profile screen.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Account & Privacy</h3>
+            <p>Scroll down to the <strong>Account & Danger Zone</strong> section and tap <strong>"Delete Account"</strong>.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Confirm Purge</h3>
+            <p>Confirm the deletion prompt. Your local SQLite records, Firestore cloud documents, and Cloudflare R2 media files are deleted immediately.</p>
+          </div>
+        </div>
+
+        <h2>Method 2: Web-Based Account Deletion Request</h2>
+        <p>
+          If you have already uninstalled the application, lost access to your device, or prefer to submit a request via web, please complete the form below. Our data compliance team will verify and permanently purge your records within <strong>30 days</strong>.
+        </p>
+
+        <!-- Deletion Form Card -->
+        <div class="form-card">
+          <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; color: var(--text-main);">Submit Deletion Request</h3>
+          
+          <!-- Live FormSubmit AJAX endpoint sending to haideralidev258@gmail.com -->
+          <form id="account-deletion-form" action="https://formsubmit.co/ajax/haideralidev258@gmail.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="🚨 PetKeeper Account Deletion Request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+            
+            <div class="form-group">
+              <label for="account-email" class="form-label">
+                Registered Account Email Address <span class="req">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="account-email" 
+                name="email" 
+                class="form-input" 
+                placeholder="e.g., user@example.com" 
+                required 
+                autocomplete="email"
+              >
+              <div class="form-hint">The Google or email address you used to sign into PetKeeper.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="pet-identifier" class="form-label">
+                Registered Pet Name(s) or Firebase UID (Optional)
+              </label>
+              <input 
+                type="text" 
+                id="pet-identifier" 
+                name="pet_name_or_uid" 
+                class="form-input" 
+                placeholder="e.g., Max, Luna or Firebase UID"
+              >
+              <div class="form-hint">Helps our team quickly locate and verify your record.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="deletion-scope" class="form-label">Deletion Scope</label>
+              <select id="deletion-scope" name="deletion_scope" class="form-select">
+                <option value="Complete Account & All Data Purge">Complete Account & All Associated Data Purge (Recommended)</option>
+                <option value="Cloud Sync & Media Only">Cloud Sync & Media Vault Data Only (Keep Local Offline Data)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="deletion-reason" class="form-label">Reason for Deletion (Optional)</label>
+              <textarea 
+                id="deletion-reason" 
+                name="reason" 
+                class="form-textarea" 
+                placeholder="Help us improve: Tell us why you are deleting your account (optional)"
+              ></textarea>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="confirm-deletion" name="user_confirmed" value="Yes" required>
+              <label for="confirm-deletion" class="form-check-label">
+                I understand that this action is irreversible. All my registered pets, vaccination records, reminders, documents, and cloud sync history will be permanently deleted.
+              </label>
+            </div>
+
+            <div id="form-status" class="form-status"></div>
+
+            <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button type="submit" id="submit-btn" class="btn btn-danger">
+                Submit Deletion Request
+              </button>
+              <button type="button" id="direct-mail-btn" class="btn btn-outline">
+                Send via Email App
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <h2>Data Categories Subject to Deletion</h2>
+        <p>In compliance with Google Play's Account Deletion Policy, here is the transparent breakdown of data handling upon deletion request:</p>
+
+        <table class="policy-table">
+          <thead>
+            <tr>
+              <th>Data Category</th>
+              <th>Data Elements</th>
+              <th>Deletion Handling & Retention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Account Identification</strong></td>
+              <td>Firebase UID, Email address, Google Sign-In profile link.</td>
+              <td><strong>Permanently Deleted</strong> from Firebase Authentication within 30 days.</td>
+            </tr>
+            <tr>
+              <td><strong>Pet Health & Medical Records</strong></td>
+              <td>Pet profiles, microchip IDs, vaccination records, medications, allergies, weight logs, event timeline.</td>
+              <td><strong>Permanently Deleted</strong> from Cloud Firestore subcollections (<code>/users/{userId}/...</code>).</td>
+            </tr>
+            <tr>
+              <td><strong>Documents & Vault Media</strong></td>
+              <td>Prescription scans, vaccination certificates, lab results, pet photos, receipts.</td>
+              <td><strong>Permanently Deleted</strong> from Cloudflare R2 object storage.</td>
+            </tr>
+            <tr>
+              <td><strong>Local Device Data</strong></td>
+              <td>SQLite database on phone, offline media cache.</td>
+              <td><strong>Purged Immediately</strong> upon in-app deletion or upon uninstalling the app.</td>
+            </tr>
+            <tr>
+              <td><strong>Retained Data</strong></td>
+              <td>None</td>
+              <td><strong>Zero data retained</strong> after deletion verification is fulfilled.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Processing Timeline</h2>
+        <ul>
+          <li><strong>In-App Deletion:</strong> Instant (0 - 60 seconds).</li>
+          <li><strong>Web Form / Email Submission:</strong> Handled by developer operations within <strong>7 business days</strong> (maximum 30 days).</li>
+        </ul>
+
+        <h2>Need Assistance?</h2>
+        <p>If you encounter any difficulty with account deletion or have questions regarding data privacy, please contact:</p>
+        <ul>
+          <li><strong>Support Email:</strong> <a href="mailto:haideralidev258@gmail.com">haideralidev258@gmail.com</a></li>
+          <li><strong>Subject Line:</strong> Account Deletion Request - PetKeeper</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4><span>🐾</span> PetKeeper</h4>
+          <p>The private, offline-first pet passport, medical timeline, and emergency card application for Android.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal & Compliance</h5>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete-account.html">Account Deletion</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Developer</h5>
+          <ul class="footer-links">
+            <li><a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
+            <li><a href="mailto:haideralidev258@gmail.com">Contact Support</a></li>
+            <li><span style="color: #64748b; font-size: 0.8125rem;">Built by Forneex</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year">2026</span> Forneex. All rights reserved.</div>
+        <div>PetKeeper &bull; Application ID: <code>com.forneex.petkeeper</code></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

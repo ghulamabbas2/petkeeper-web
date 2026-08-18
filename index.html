@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetKeeper — Offline Pet Passport, Medical Timeline & Vault</title>
+  <meta name="description" content="PetKeeper is a private, offline-first Android pet passport, chronological medical timeline, document vault, emergency card, and caregiver handoff tool. Zero ads, zero trackers.">
+  <meta name="keywords" content="pet passport, pet medical records, pet vaccination tracker, pet keeper, pet vault, dog health app, cat medical timeline, vet records offline">
+  <meta property="og:title" content="PetKeeper — Offline Pet Passport & Care Vault">
+  <meta property="og:description" content="Keep your pet's complete medical history, vaccines, allergies, prescriptions, and emergency contacts safely in your pocket. Offline-first and private.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">🐾</div>
+        <span>PetKeeper</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="delete-account.html" class="nav-link">Delete Account</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" class="nav-btn" target="_blank" rel="noopener noreferrer">Get App</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge-pill">
+        <span>🛡️</span> 100% Offline-First & Private Care Vault
+      </div>
+      
+      <h1>Your Pet's Permanent Health Passport, <br><span class="gradient-text">Always Ready in Your Pocket</span></h1>
+      
+      <p class="hero-subtitle">
+        PetKeeper organizes your pets' complete vaccination records, medical timelines, prescriptions, microchip IDs, and emergency contacts. Built with high-speed offline SQLite and zero third-party trackers.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186c-.372-.372-.61-.926-.61-1.572V3.386c0-.646.238-1.2.61-1.572zm11.3 9.07l2.84-2.84-12.87-7.39 10.03 10.23zm0 2.232L4.879 23.346l12.87-7.39-2.84-2.84zm1.116-1.116l3.41 1.958c.78.448.78 1.18 0 1.628l-3.41 1.958-2.28-2.28 2.28-2.264z"/>
+          </svg>
+          Download on Google Play
+        </a>
+        <a href="#features" class="btn btn-outline">Explore Capabilities</a>
+      </div>
+
+      <!-- Hero Visual Preview -->
+      <div class="hero-preview">
+        <div class="preview-grid">
+          <div class="preview-card">
+            <div class="preview-badge sos">🚨 Emergency SOS</div>
+            <div class="preview-title">Instant Vet Summary</div>
+            <p class="preview-desc">1-tap clinic handoff card with microchip numbers, blood types, allergies, and emergency phone shortcuts.</p>
+          </div>
+
+          <div class="preview-card">
+            <div class="preview-badge vac">💉 Care Timeline</div>
+            <div class="preview-title">Booster Reminders</div>
+            <p class="preview-desc">Automated offline alerts for rabies, core vaccines, flea/tick drops, and daily medications.</p>
+          </div>
+
+          <div class="preview-card">
+            <div class="preview-badge vault">📁 Document Vault</div>
+            <div class="preview-title">Prescriptions & Labs</div>
+            <p class="preview-desc">Private sandbox storage for vet lab reports, adoption papers, and invoice receipts with 5MB quota safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Engineered for Pet Parents</div>
+        <h2 class="section-title">Everything your pet needs, from checkups to emergencies</h2>
+        <p class="section-subtitle">No slow load times, no intrusive ads, and no unexpected cloud lockouts. PetKeeper works wherever you and your pet travel.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon-box">🐾</div>
+          <h3>Multi-Pet Digital Passport</h3>
+          <p>Register multiple dogs, cats, birds, and small pets. Store microchip ISO IDs, breed lineage, date of birth, neuter status, and physical identifiers.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">⚡</div>
+          <h3>100% Offline-First Speed</h3>
+          <p>Powered by local C++ SQLite database bindings. Add weight logs, vet appointments, and medications instantly even with zero cell signal.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">📄</div>
+          <h3>Caregiver Handoff PDF</h3>
+          <p>Export a clean, professional PDF summary of feeding routines, active medications, and veterinary contacts for pet sitters or boarding kennels.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">🔔</div>
+          <h3>Local Scheduled Reminders</h3>
+          <p>Customizable recurring alarms for upcoming deworming, annual checkups, and grooming sessions handled securely on your device via Notifee.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">💰</div>
+          <h3>Pet Expense Tracking</h3>
+          <p>Track food, medical, toy, and grooming expenses. Gain instant insights into your monthly pet healthcare budget with visual summaries.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">🔒</div>
+          <h3>Isolated Cloud Sync</h3>
+          <p>Optional Cloud Firestore structured sync and Cloudflare R2 media vault strictly isolated by your Firebase UID. Your data is never shared or sold.</p>
+        </div>
+      </div>
+
+      <!-- Privacy Promise Banner -->
+      <div class="privacy-banner">
+        <div class="privacy-banner-content">
+          <h2>Zero Ads. Zero Trackers. Complete Privacy.</h2>
+          <p>We believe pet healthcare records are personal. PetKeeper contains zero AdMob tracking SDKs, zero data broker integrations, and zero behavioral telemetry.</p>
+        </div>
+        <a href="privacy-policy.html" class="btn">Read Privacy Policy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4><span>🐾</span> PetKeeper</h4>
+          <p>The private, offline-first pet passport, medical timeline, and emergency card application for Android.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal & Compliance</h5>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete-account.html">Account Deletion</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Developer</h5>
+          <ul class="footer-links">
+            <li><a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
+            <li><a href="mailto:haideralidev258@gmail.com">Contact Support</a></li>
+            <li><span style="color: #64748b; font-size: 0.8125rem;">Built by Forneex</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year">2026</span> Forneex. All rights reserved.</div>
+        <div>PetKeeper &bull; Application ID: <code>com.forneex.petkeeper</code></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
