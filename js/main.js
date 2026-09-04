@@ -39,7 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Account Deletion Form Handling
+  // 4. FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    const trigger = item.querySelector('.faq-q');
+    if (!trigger) return;
+    trigger.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      faqItems.forEach((other) => other.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // 5. Account Deletion Form Handling
   const deleteForm = document.getElementById('account-deletion-form');
   const formStatus = document.getElementById('form-status');
   const directMailBtn = document.getElementById('direct-mail-btn');

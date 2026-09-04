@@ -13,8 +13,8 @@ This directory contains the production-ready static web application for **PetKee
 | **`privacy-policy.html`** | Detailed, legally sound, GDPR & Google Play compliant privacy policy | **Privacy Policy URL** |
 | **`delete-account.html`** | Account Deletion Portal with step-by-step in-app guide, web form & data retention disclosures | **Account Deletion URL** |
 | **`terms.html`** | Terms of Service and veterinary medical disclaimer | Legal / Terms URL |
-| **`css/style.css`** | Pure Vanilla CSS design system (Teal/Emerald `#0D9488`, responsive mobile nav, modern typography) | Stylesheet |
-| **`js/main.js`** | Mobile menu toggling, dynamic dates, and asynchronous form submission with mailto fallback | Script Logic |
+| **`css/style.css`** | Pure Vanilla CSS design system (Rose/blush palette `#c81a68`, Fredoka + Plus Jakarta Sans, responsive mobile nav) | Stylesheet |
+| **`js/main.js`** | Mobile menu toggling, FAQ accordion, dynamic dates, and asynchronous form submission with mailto fallback | Script Logic |
 
 ---
 

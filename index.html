@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PetKeeper — Offline Pet Passport, Medical Timeline & Vault</title>
-  <meta name="description" content="PetKeeper is a private, offline-first Android pet passport, chronological medical timeline, document vault, emergency card, and caregiver handoff tool. Zero ads, zero trackers.">
-  <meta name="keywords" content="pet passport, pet medical records, pet vaccination tracker, pet keeper, pet vault, dog health app, cat medical timeline, vet records offline">
+  <meta name="description" content="PetKeeper is a private, offline-first Android pet passport: medical timeline, care reminders, emergency card, vet summary PDF, sitter handoff, expense tracker and document vault. Zero ads, zero trackers.">
+  <meta name="keywords" content="pet passport, pet medical records, pet vaccination tracker, pet keeper, pet vault, dog health app, cat medical timeline, vet records offline, pet expense tracker">
   <meta property="og:title" content="PetKeeper — Offline Pet Passport & Care Vault">
   <meta property="og:description" content="Keep your pet's complete medical history, vaccines, allergies, prescriptions, and emergency contacts safely in your pocket. Offline-first and private.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,11 +33,11 @@
       </button>
 
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
         <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
-        <li><a href="delete-account.html" class="nav-link">Delete Account</a></li>
         <li><a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" class="nav-btn" target="_blank" rel="noopener noreferrer">Get App</a></li>
       </ul>
     </div>
@@ -47,13 +47,15 @@
   <section class="hero">
     <div class="container">
       <div class="badge-pill">
-        <span>🛡️</span> 100% Offline-First & Private Care Vault
+        <span>🛡️</span> 100% Offline-First &middot; Zero Ads &middot; Zero Trackers
       </div>
-      
-      <h1>Your Pet's Permanent Health Passport, <br><span class="gradient-text">Always Ready in Your Pocket</span></h1>
-      
+
+      <h1>Your Pet's Whole Life, <br><span class="gradient-text">Organized in Your Pocket</span></h1>
+
       <p class="hero-subtitle">
-        PetKeeper organizes your pets' complete vaccination records, medical timelines, prescriptions, microchip IDs, and emergency contacts. Built with high-speed offline SQLite and zero third-party trackers.
+        PetKeeper is the complete pet passport: medical timeline, care reminders, weight &amp; vaccination history,
+        an instant emergency card, sitter handoff sheets, and a private document vault — all synced safely
+        across your devices, never sold, never tracked.
       </p>
 
       <div class="hero-actions">
@@ -63,88 +65,329 @@
           </svg>
           Download on Google Play
         </a>
-        <a href="#features" class="btn btn-outline">Explore Capabilities</a>
+        <a href="#features" class="btn btn-outline">Explore Every Feature</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>8</strong><span>Quick-log record types</span></div>
+        <div class="hero-stat"><strong>&lt;50ms</strong><span>Offline emergency card render</span></div>
+        <div class="hero-stat"><strong>0</strong><span>Ad networks or trackers</span></div>
       </div>
 
       <!-- Hero Visual Preview -->
       <div class="hero-preview">
         <div class="preview-grid">
           <div class="preview-card">
-            <div class="preview-badge sos">🚨 Emergency SOS</div>
-            <div class="preview-title">Instant Vet Summary</div>
-            <p class="preview-desc">1-tap clinic handoff card with microchip numbers, blood types, allergies, and emergency phone shortcuts.</p>
+            <div class="preview-badge sos">🚨 Emergency Card</div>
+            <div class="preview-title">Triage-Ready in One Tap</div>
+            <p class="preview-desc">Allergies, active meds, microchip ID, and three tap-to-call contacts — rendered instantly from local storage, no signal required.</p>
           </div>
 
           <div class="preview-card">
             <div class="preview-badge vac">💉 Care Timeline</div>
-            <div class="preview-title">Booster Reminders</div>
-            <p class="preview-desc">Automated offline alerts for rabies, core vaccines, flea/tick drops, and daily medications.</p>
+            <div class="preview-title">Every Vaccine, Every Dose</div>
+            <p class="preview-desc">Automated reminders for boosters, medications, and checkups that fire on schedule, even in deep sleep mode.</p>
           </div>
 
           <div class="preview-card">
             <div class="preview-badge vault">📁 Document Vault</div>
-            <div class="preview-title">Prescriptions & Labs</div>
-            <p class="preview-desc">Private sandbox storage for vet lab reports, adoption papers, and invoice receipts with 5MB quota safety.</p>
+            <div class="preview-title">Certificates &amp; Receipts</div>
+            <p class="preview-desc">Private, encrypted storage for lab reports, prescriptions, and insurance paperwork — organized and searchable.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features-section" id="features">
+  <!-- Feature Modules -->
+  <section id="features">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Engineered for Pet Parents</div>
-        <h2 class="section-title">Everything your pet needs, from checkups to emergencies</h2>
-        <p class="section-subtitle">No slow load times, no intrusive ads, and no unexpected cloud lockouts. PetKeeper works wherever you and your pet travel.</p>
+        <h2 class="section-title">Every screen built around a real moment of pet care</h2>
+        <p class="section-subtitle">From the 3am medication dose to the emergency room drop-off — PetKeeper is designed for the moments that actually matter.</p>
       </div>
 
+      <!-- Module 1: Passport & Dashboard -->
+      <div class="module">
+        <div>
+          <div class="module-icon">🐾</div>
+          <h3>One Passport per Pet, Always Current</h3>
+          <p>Register every dog, cat, bird, or small pet you care for. Your home dashboard leads with a passport hero card: name, breed, age, latest weight trend, rabies status, and your primary vet — the things you check before every appointment.</p>
+          <ul class="module-list">
+            <li>Microchip ID with 1-tap clipboard copy</li>
+            <li>Weight trend badge (e.g. +0.2&nbsp;kg since last log)</li>
+            <li>Rabies immunity status: Valid, Upcoming, or Overdue</li>
+            <li>Switch between pets instantly from the header dropdown</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Buddy — Golden Retriever</span><span class="chip ok">3 yrs 2 mos</span></div>
+          <div class="card-row"><span>Latest weight</span><span>28.4 kg (+0.3)</span></div>
+          <div class="card-row"><span>Rabies booster</span><span class="chip ok">Valid</span></div>
+          <div class="card-row"><span>Flea &amp; tick drop</span><span class="chip due">Due in 2 days</span></div>
+          <div class="card-row"><span>Primary vet</span><span>Dr. Alvarez, Riverside Clinic</span></div>
+        </div>
+      </div>
+
+      <!-- Module 2: Quick Log -->
+      <div class="module reverse">
+        <div>
+          <div class="module-icon">⚡</div>
+          <h3>Log Anything in Under 5 Seconds</h3>
+          <p>The thumb-optimized Quick Log sheet covers eight record types in one grid — no digging through menus after a long vet visit.</p>
+          <ul class="module-list">
+            <li>Vaccine, Weight, Medication, Food/Diet</li>
+            <li>Expense, Vet Visit, Note/Symptom, Document/Photo</li>
+            <li>Inline validation catches mistakes before you save</li>
+            <li>One tap attaches a camera photo or gallery file</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>💉 Vaccine</span><span>Rabies · Lot #A2291</span></div>
+          <div class="card-row"><span>⚖️ Weight</span><span>28.4 kg</span></div>
+          <div class="card-row"><span>💊 Medication</span><span>Apoquel · 16mg · Daily</span></div>
+          <div class="card-row"><span>🍖 Food / Diet</span><span>Royal Canin · 1.5 cups</span></div>
+        </div>
+      </div>
+
+      <!-- Module 3: Timeline -->
+      <div class="module">
+        <div>
+          <div class="module-icon">🗓️</div>
+          <h3>A Chronological Care Timeline</h3>
+          <p>Every event lands on one searchable timeline — filter by category, search by clinic or medication name, and see exactly what happened and when.</p>
+          <ul class="module-list">
+            <li>Filter chips: Vaccination, Vet Visit, Medication, Grooming, Symptom, Expense</li>
+            <li>Debounced search across titles, notes, and clinic names</li>
+            <li>Attached photos and documents open full-screen in one tap</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Today, 4:30 PM</span><span>Vet Visit — Follow-up</span></div>
+          <div class="card-row"><span>Yesterday</span><span>Medication — Apoquel</span></div>
+          <div class="card-row"><span>Aug 22</span><span>Vaccination — Bordetella</span></div>
+          <div class="card-row"><span>Aug 10</span><span>Expense — Grooming ($45)</span></div>
+        </div>
+      </div>
+
+      <!-- Module 4: Care Reminders -->
+      <div class="module reverse">
+        <div>
+          <div class="module-icon">🔔</div>
+          <h3>Reminders That Actually Fire on Time</h3>
+          <p>Care reminders use exact-alarm scheduling so a medication dose fires at the exact minute you set — even while your device is idle in deep sleep. Recurring reminders reschedule themselves automatically after every completion.</p>
+          <ul class="module-list">
+            <li>Daily, Weekly, Monthly, and Yearly recurrence</li>
+            <li>Overdue and upcoming reminders surface on the Home dashboard</li>
+            <li>Automatically re-arms after a timezone or clock change</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Insulin dose</span><span class="chip overdue">Overdue 1h</span></div>
+          <div class="card-row"><span>Heartworm tablet</span><span class="chip due">Due in 3h</span></div>
+          <div class="card-row"><span>Annual checkup</span><span class="chip ok">In 4 weeks</span></div>
+        </div>
+      </div>
+
+      <!-- Module 5: Health Records -->
+      <div class="module">
+        <div>
+          <div class="module-icon">📋</div>
+          <h3>Complete Medical Records, Not Just Notes</h3>
+          <p>Weight progression, a full vaccination ledger with lot numbers and expiry dates, active prescriptions, chronic conditions, allergies, and blood type — everything a vet asks for on intake.</p>
+          <ul class="module-list">
+            <li>Weight history table with calculated delta per entry</li>
+            <li>Vaccination ledger linked to scanned certificates</li>
+            <li>Allergy and chronic condition tag lists</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Chronic conditions</span><span>Mild hip dysplasia</span></div>
+          <div class="card-row"><span>Allergies</span><span class="chip overdue">Penicillin</span></div>
+          <div class="card-row"><span>Blood type</span><span>DEA 1.1 Positive</span></div>
+          <div class="card-row"><span>Active prescriptions</span><span>2 ongoing</span></div>
+        </div>
+      </div>
+
+      <!-- Module 6: Emergency Card -->
+      <div class="module reverse">
+        <div>
+          <div class="module-icon">🚨</div>
+          <h3>The Emergency Card That Renders Without Signal</h3>
+          <p>A zero-network, high-contrast card built for triage — first responders or an unfamiliar vet get everything critical in seconds: allergies, active meds, microchip ID, and three tap-to-call contacts.</p>
+          <ul class="module-list">
+            <li>Renders from local memory in under 50ms, no network needed</li>
+            <li>Severe allergy warning banner at the top</li>
+            <li>One-tap phone dialer for emergency clinic, vet, and owner</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>⚠️ Severe allergy</span><span class="chip overdue">Penicillin</span></div>
+          <div class="card-row"><span>Active medication</span><span>Apoquel · daily</span></div>
+          <div class="card-row"><span>Emergency clinic</span><span>📞 Tap to call</span></div>
+          <div class="card-row"><span>Owner contact</span><span>📞 Tap to call</span></div>
+        </div>
+      </div>
+
+      <!-- Module 7: Vet Summary & Handoff -->
+      <div class="module">
+        <div>
+          <div class="module-icon">📄</div>
+          <h3>Export a Vet Summary or Sitter Handoff in Seconds</h3>
+          <p>Compile a clean PDF vet summary — identification, full vaccination ledger, medications, weight history, allergies, and attached lab documents — with a date-range filter. Or generate a sitter handoff sheet with feeding protocol, medication schedule, and emergency numbers, ready to copy into a text message.</p>
+          <ul class="module-list">
+            <li>Choose exactly which sections to include before exporting</li>
+            <li>Opens the Android print dialog or native share sheet</li>
+            <li>Sitter text formats cleanly for WhatsApp or SMS</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Vaccination ledger</span><span class="chip ok">Included</span></div>
+          <div class="card-row"><span>Medications</span><span class="chip ok">Included</span></div>
+          <div class="card-row"><span>Expense ledger</span><span>Excluded by default</span></div>
+          <div class="card-row"><span>Lab documents</span><span class="chip ok">Included</span></div>
+        </div>
+      </div>
+
+      <!-- Module 8: Expenses & Vault -->
+      <div class="module reverse">
+        <div>
+          <div class="module-icon">💰</div>
+          <h3>Expense Tracking and a Private Document Vault</h3>
+          <p>Track spending against a monthly budget across eight categories, and store every certificate, receipt, and lab report in a document vault that never touches your phone's public gallery.</p>
+          <ul class="module-list">
+            <li>Category breakdown: Vet &amp; Medical, Food, Grooming, Insurance, and more</li>
+            <li>Receipt photo attached directly to each expense</li>
+            <li>Documents saved with a <code>.nomedia</code> marker so gallery apps never index them</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Monthly budget</span><span>$120 / $180 used</span></div>
+          <div class="card-row"><span>Vet &amp; Medical</span><span>$68.00</span></div>
+          <div class="card-row"><span>Food &amp; Treats</span><span>$34.50</span></div>
+          <div class="card-row"><span>Document vault</span><span>14 files · 22 MB</span></div>
+        </div>
+      </div>
+
+      <!-- Module 9: Backup & Restore -->
+      <div class="module">
+        <div>
+          <div class="module-icon">☁️</div>
+          <h3>Offline-First, With Safe Cloud Backup When You Want It</h3>
+          <p>PetKeeper works completely offline with zero account required. Turn on Google Drive backup and your data syncs to your own private <code>appDataFolder</code> — a hidden space no other app can read — with a minimal OAuth scope and nothing else.</p>
+          <ul class="module-list">
+            <li>Daily, Weekly, or Monthly automated backup with Wi-Fi-only option</li>
+            <li>2-stage safe restore previews record counts before anything is written</li>
+            <li>Restoring a backup from another account automatically re-maps ownership to you</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <div class="card-row"><span>Backup status</span><span class="chip ok">Connected</span></div>
+          <div class="card-row"><span>Last backup</span><span>Today, 2:14 AM</span></div>
+          <div class="card-row"><span>Schedule</span><span>Daily · Wi-Fi only</span></div>
+          <div class="card-row"><span>Archives retained</span><span>3 most recent</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Getting Started</div>
+        <h2 class="section-title">From install to emergency-ready in four steps</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h4>Add your pet</h4><p>Name, species, breed, DOB, microchip ID — the passport basics, done once.</p></div>
+        <div class="step"><h4>Log the essentials</h4><p>Vaccinations, weight, allergies, and your vet's contact info via Quick Log.</p></div>
+        <div class="step"><h4>Set your reminders</h4><p>Medications and boosters scheduled to fire at the exact minute you choose.</p></div>
+        <div class="step"><h4>Back up (optional)</h4><p>Connect Google Drive for cross-device sync, or stay fully offline forever.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Grid + Banner -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Privacy by Architecture</div>
+        <h2 class="section-title">Your pet's medical data isn't a product</h2>
+        <p class="section-subtitle">No feed, no comments, no public profile — every record is private to your account, enforced at the database level.</p>
+      </div>
       <div class="features-grid">
         <div class="feature-item">
-          <div class="feature-icon-box">🐾</div>
-          <h3>Multi-Pet Digital Passport</h3>
-          <p>Register multiple dogs, cats, birds, and small pets. Store microchip ISO IDs, breed lineage, date of birth, neuter status, and physical identifiers.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon-box">⚡</div>
-          <h3>100% Offline-First Speed</h3>
-          <p>Powered by local C++ SQLite database bindings. Add weight logs, vet appointments, and medications instantly even with zero cell signal.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon-box">📄</div>
-          <h3>Caregiver Handoff PDF</h3>
-          <p>Export a clean, professional PDF summary of feeding routines, active medications, and veterinary contacts for pet sitters or boarding kennels.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon-box">🔔</div>
-          <h3>Local Scheduled Reminders</h3>
-          <p>Customizable recurring alarms for upcoming deworming, annual checkups, and grooming sessions handled securely on your device via Notifee.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon-box">💰</div>
-          <h3>Pet Expense Tracking</h3>
-          <p>Track food, medical, toy, and grooming expenses. Gain instant insights into your monthly pet healthcare budget with visual summaries.</p>
-        </div>
-
-        <div class="feature-item">
           <div class="feature-icon-box">🔒</div>
-          <h3>Isolated Cloud Sync</h3>
-          <p>Optional Cloud Firestore structured sync and Cloudflare R2 media vault strictly isolated by your Firebase UID. Your data is never shared or sold.</p>
+          <h3>Strict Per-User Isolation</h3>
+          <p>Production Firestore rules validate your Firebase UID on every read and write — no record is ever reachable by another account.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-box">📡</div>
+          <h3>No Ads, No Analytics SDKs</h3>
+          <p>Zero AdMob, zero Firebase Analytics, zero Facebook SDK, zero data-broker libraries. Nothing to opt out of because nothing is collected.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-box">🗝️</div>
+          <h3>Minimal OAuth Scope</h3>
+          <p>Google Drive backup requests only the hidden <code>appDataFolder</code> scope — it can never see or touch your other Drive files.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-box">📴</div>
+          <h3>Media Stays on Your Device by Default</h3>
+          <p>Photos and documents live in a private local sandbox until you explicitly turn on cloud backup — the app tells you plainly when that's the case.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-box">🧹</div>
+          <h3>Full Account Deletion</h3>
+          <p>One confirmed action purges Firestore, Cloudflare R2 media, local SQLite, and revokes Google tokens — permanently, not just hidden.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-box">📴</div>
+          <h3>Works With Zero Connectivity</h3>
+          <p>Every screen reads from local SQLite first. A dead cell signal at the vet clinic never locks you out of your pet's records.</p>
         </div>
       </div>
 
-      <!-- Privacy Promise Banner -->
       <div class="privacy-banner">
         <div class="privacy-banner-content">
           <h2>Zero Ads. Zero Trackers. Complete Privacy.</h2>
-          <p>We believe pet healthcare records are personal. PetKeeper contains zero AdMob tracking SDKs, zero data broker integrations, and zero behavioral telemetry.</p>
+          <p>We believe pet healthcare records are personal — not ad inventory. Read exactly what's collected and why.</p>
         </div>
         <a href="privacy-policy.html" class="btn">Read Privacy Policy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Questions</div>
+        <h2 class="section-title">Frequently asked</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q"><span>Do I need an account to use PetKeeper?</span><span class="plus">+</span></button>
+          <div class="faq-a"><p>No. PetKeeper works fully offline in Local Mode with no sign-in required. Google Sign-In is only needed if you want cross-device cloud sync and Google Drive backup.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Does PetKeeper show ads or sell my data?</span><span class="plus">+</span></button>
+          <div class="faq-a"><p>Never. There are no ad SDKs, no analytics trackers, and no third-party data sharing anywhere in the app.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>What happens to my data if I delete my account?</span><span class="plus">+</span></button>
+          <div class="faq-a"><p>A confirmed deletion permanently purges your Firestore records, Cloudflare R2 media, local SQLite database, and revokes Google OAuth tokens. See our <a href="delete-account.html">Account Deletion</a> page for the full process.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can I use PetKeeper for more than one pet?</span><span class="plus">+</span></button>
+          <div class="faq-a"><p>Yes — register as many pets as you like, each with its own passport, timeline, reminders, and documents. Switch between them from the Home dashboard.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Is PetKeeper a replacement for veterinary advice?</span><span class="plus">+</span></button>
+          <div class="faq-a"><p>No. PetKeeper is a record-keeping and organizational tool. It does not provide medical diagnoses — always consult a licensed veterinarian for medical decisions.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -155,7 +398,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h4><span>🐾</span> PetKeeper</h4>
-          <p>The private, offline-first pet passport, medical timeline, and emergency card application for Android.</p>
+          <p>The private, offline-first pet passport, medical timeline, and emergency care vault for Android.</p>
         </div>
 
         <div class="footer-col">
@@ -168,7 +411,7 @@
         </div>
 
         <div class="footer-col">
-          <h5>Legal & Compliance</h5>
+          <h5>Legal &amp; Compliance</h5>
           <ul class="footer-links">
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
@@ -181,7 +424,6 @@
           <ul class="footer-links">
             <li><a href="https://play.google.com/store/apps/details?id=com.forneex.petkeeper" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
             <li><a href="mailto:haideralidev258@gmail.com">Contact Support</a></li>
-            <li><span style="color: #64748b; font-size: 0.8125rem;">Built by Forneex</span></li>
           </ul>
         </div>
       </div>
