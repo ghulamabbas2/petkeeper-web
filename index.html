@@ -275,7 +275,7 @@
         <div>
           <div class="module-icon">☁️</div>
           <h3>Offline-First, With Safe Cloud Backup When You Want It</h3>
-          <p>PetKeeper works completely offline with zero account required. Turn on Google Drive backup and your data syncs to your own private <code>appDataFolder</code> — a hidden space no other app can read — with a minimal OAuth scope and nothing else.</p>
+          <p>PetKeeper works completely offline with zero account required. Turn on Google Drive backup and your data syncs to a hidden, private folder in your own Google Drive that no other app can read — we ask for access to that one folder and nothing else.</p>
           <ul class="module-list">
             <li>Daily, Weekly, or Monthly automated backup with Wi-Fi-only option</li>
             <li>2-stage safe restore previews record counts before anything is written</li>
@@ -321,17 +321,17 @@
         <div class="feature-item">
           <div class="feature-icon-box">🔒</div>
           <h3>Strict Per-User Isolation</h3>
-          <p>Production Firestore rules validate your Firebase UID on every read and write — no record is ever reachable by another account.</p>
+          <p>Every request is checked against your signed-in account before any record is read or written — no record is ever reachable by another account.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon-box">📡</div>
           <h3>No Analytics or Data-Broker SDKs</h3>
-          <p>Zero Firebase Analytics, zero Facebook SDK, zero data-broker libraries. Your pet's medical data is never sold or shared with third parties.</p>
+          <p>Zero analytics trackers, zero Facebook SDK, zero data-broker libraries. Your pet's medical data is never sold or shared with third parties.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon-box">🗝️</div>
-          <h3>Minimal OAuth Scope</h3>
-          <p>Google Drive backup requests only the hidden <code>appDataFolder</code> scope — it can never see or touch your other Drive files.</p>
+          <h3>Minimal Google Drive Access</h3>
+          <p>Google Drive backup only asks for access to one hidden, private folder — it can never see or touch your other Drive files.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon-box">📴</div>
@@ -341,12 +341,12 @@
         <div class="feature-item">
           <div class="feature-icon-box">🧹</div>
           <h3>Full Account Deletion</h3>
-          <p>One confirmed action purges Firestore, Cloudflare R2 media, local SQLite, and revokes Google tokens — permanently, not just hidden.</p>
+          <p>One confirmed action permanently erases your cloud records, your stored photos and documents, and everything saved on your device, and disconnects your Google account — not just hidden.</p>
         </div>
         <div class="feature-item">
           <div class="feature-icon-box">📴</div>
           <h3>Works With Zero Connectivity</h3>
-          <p>Every screen reads from local SQLite first. A dead cell signal at the vet clinic never locks you out of your pet's records.</p>
+          <p>Every screen reads from your device first. A dead cell signal at the vet clinic never locks you out of your pet's records.</p>
         </div>
       </div>
 
@@ -378,7 +378,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q"><span>What happens to my data if I delete my account?</span><span class="plus">+</span></button>
-          <div class="faq-a"><p>A confirmed deletion permanently purges your Firestore records, Cloudflare R2 media, local SQLite database, and revokes Google OAuth tokens. See our <a href="delete-account.html">Account Deletion</a> page for the full process.</p></div>
+          <div class="faq-a"><p>A confirmed deletion permanently erases your cloud records, stored photos and documents, and everything saved on your device, and disconnects your Google account. See our <a href="delete-account.html">Account Deletion</a> page for the full process.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span>Can I use PetKeeper for more than one pet?</span><span class="plus">+</span></button>

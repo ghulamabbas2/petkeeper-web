@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — PetKeeper</title>
-  <meta name="description" content="PetKeeper's privacy policy: what data we collect, why, how it's stored (Firebase, Cloudflare R2, Google Drive appdata), and how to request deletion.">
+  <meta name="description" content="PetKeeper's privacy policy: what data we collect, why, how it's stored securely, and how to request deletion.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,13 +57,13 @@
         <p><strong>Forneex</strong> is the developer and data controller for PetKeeper. For any privacy question, contact us at <a href="mailto:haideralidev258@gmail.com">haideralidev258@gmail.com</a>.</p>
 
         <div class="policy-callout info">
-          <p><strong>The short version:</strong> PetKeeper contains no Facebook SDK, no Firebase Analytics, and no marketing data-broker libraries. Your pet's medical data is never sold or rented to anyone.</p>
+          <p><strong>The short version:</strong> PetKeeper contains no Facebook SDK, no third-party analytics trackers, and no marketing data-broker libraries. Your pet's medical data is never sold or rented to anyone.</p>
         </div>
 
         <h2>2. Data We Collect</h2>
 
         <h3>2.1 Account Data (only if you sign in)</h3>
-        <p>PetKeeper works fully offline with no account. If you choose to sign in with Google to enable cloud sync, we collect your Firebase Authentication User ID (UID), display name, and email address — used solely to identify and isolate your synced data.</p>
+        <p>PetKeeper works fully offline with no account. If you choose to sign in with Google to enable cloud sync, we collect a unique account ID, display name, and email address — used solely to identify and isolate your synced data.</p>
 
         <h3>2.2 Pet &amp; Care Data You Enter</h3>
         <p>Pet identity details (name, species, breed, date of birth, microchip ID), medical records, vaccination history, medication schedules, weight logs, allergies, chronic conditions, veterinary and emergency contacts, care reminders, and expense records — all entered by you.</p>
@@ -87,19 +87,19 @@
 
         <h2>3. Third-Party Services We Use</h2>
         <ul>
-          <li><strong>Google Firebase</strong> — Authentication and Cloud Firestore, used for account sign-in and structured data sync.</li>
-          <li><strong>Cloudflare R2</strong> — Private, encrypted object storage for your pet's photos and documents, gated behind Firebase token verification per request.</li>
-          <li><strong>Google Drive (appdata scope only)</strong> — Optional automated backup writes a single archive into your account's hidden <code>appDataFolder</code>, a space invisible to you and every other app in Drive's normal file browser. We request no broader Drive access.</li>
-          <li><strong>Notifee</strong> — On-device local notification delivery for reminders; no data leaves your device for this.</li>
+          <li><strong>Account sign-in &amp; cloud sync provider</strong> — used for secure sign-in and to keep your structured pet records synced across your devices.</li>
+          <li><strong>Secure cloud storage provider</strong> — encrypted storage for your pet's photos and documents, accessible only after verifying it's really you.</li>
+          <li><strong>Google Drive (limited, hidden-folder access only)</strong> — Optional automated backup writes a single archive into a hidden, private folder in your Google Drive that's invisible to you and every other app in Drive's normal file browser. We never request access to your other Drive files.</li>
+          <li><strong>On-device notification delivery</strong> — used to show your reminders; nothing leaves your device for this.</li>
         </ul>
-        <p>We do not use Facebook SDK, Firebase Analytics, Mixpanel, or any behavioral-tracking library. If we introduce an advertising SDK in a future update, this policy will be updated first and the Effective Date above will change to reflect it.</p>
+        <p>We do not use Facebook's SDK, third-party analytics trackers, or any behavioral-tracking library. If we introduce an advertising service in a future update, this policy will be updated first and the Effective Date above will change to reflect it.</p>
 
         <h2>4. How Your Data Is Protected</h2>
         <ul>
-          <li>All network traffic to Firebase and Cloudflare R2 is encrypted in transit (HTTPS/TLS).</li>
-          <li>Firestore security rules cryptographically enforce that only your authenticated UID can read or write your records.</li>
-          <li>Cloudflare R2 media has no permanent public URLs — every request is verified against your Firebase ID token.</li>
-          <li>Local photos and documents are stored in a private device sandbox marked with a <code>.nomedia</code> file so public gallery apps never index them.</li>
+          <li>All network traffic to our servers is encrypted in transit.</li>
+          <li>Server-side rules cryptographically enforce that only you can read or write your own records.</li>
+          <li>Your photos and documents have no permanent public web address — every request to view them is verified against your signed-in account first.</li>
+          <li>Local photos and documents are stored in a private area of your device that public gallery apps never index.</li>
         </ul>
 
         <h2>5. Data Retention</h2>
@@ -109,7 +109,7 @@
         <p>Depending on your location, you may have rights under GDPR, CCPA, or similar laws to access, correct, export, or erase your personal data. You can exercise all of these directly in the app (Settings → Backup for export, Settings → Danger Zone for deletion), or by contacting us at <a href="mailto:haideralidev258@gmail.com">haideralidev258@gmail.com</a>.</p>
 
         <h2>7. Deleting Your Data</h2>
-        <p>You can permanently delete your account and all associated data at any time, either in-app or via our dedicated <a href="delete-account.html">Account Deletion page</a> — no login required to submit a request. Deletion purges your Firestore records, Cloudflare R2 media, local SQLite database, and revokes Google OAuth tokens.</p>
+        <p>You can permanently delete your account and all associated data at any time, either in-app or via our dedicated <a href="delete-account.html">Account Deletion page</a> — no login required to submit a request. Deletion erases your cloud records, your stored photos and documents, and everything saved on your device, and disconnects your Google account.</p>
 
         <h2>8. Children's Privacy</h2>
         <p>PetKeeper is not directed to individuals under the age of 13 (or under 16 in jurisdictions where that threshold applies), and we do not knowingly collect personal information from children. If you believe a child has provided us with personal data, contact us and we will remove it.</p>

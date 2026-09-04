@@ -65,7 +65,7 @@
         </div>
         <div class="delete-step">
           <div class="num">4</div>
-          <div><strong>Done</strong><p>Your local SQLite records, Firestore cloud documents, and Cloudflare R2 media files are deleted immediately.</p></div>
+          <div><strong>Done</strong><p>Everything saved on your device, your cloud records, and your stored photos and documents are deleted immediately.</p></div>
         </div>
       </div>
 
@@ -74,9 +74,9 @@
           <table class="data-table">
             <thead><tr><th>Data category</th><th>What happens</th></tr></thead>
             <tbody>
-              <tr><td>Account (Firebase UID, email, Google Sign-In link)</td><td>Permanently deleted from Firebase Authentication within 30 days</td></tr>
-              <tr><td>Pet profiles &amp; medical records</td><td>Removed from Cloud Firestore immediately</td></tr>
-              <tr><td>Photos &amp; documents</td><td>Purged from Cloudflare R2 storage immediately</td></tr>
+              <tr><td>Account (ID, email, Google Sign-In link)</td><td>Permanently deleted from our sign-in system within 30 days</td></tr>
+              <tr><td>Pet profiles &amp; medical records</td><td>Removed from our cloud database immediately</td></tr>
+              <tr><td>Photos &amp; documents</td><td>Purged from cloud storage immediately</td></tr>
               <tr><td>Local device data</td><td>Deleted immediately on confirmation, and again on app uninstall</td></tr>
             </tbody>
           </table>
@@ -103,7 +103,7 @@
 
           <div class="form-group">
             <label for="pet-identifier">Pet name(s) or account identifier <span style="color:var(--ink-faint)">(optional, helps us find your account)</span></label>
-            <input type="text" id="pet-identifier" name="Pet Identifier" placeholder="e.g. Buddy, or your Firebase UID">
+            <input type="text" id="pet-identifier" name="Pet Identifier" placeholder="e.g. Buddy, or your account ID">
           </div>
 
           <div class="form-group">

@@ -60,10 +60,10 @@
         <h2>Core Engineering Principles</h2>
 
         <h3>1. Offline Independence, by Default</h3>
-        <p>Every pet profile, reminder, expense, and medical event is written to a local SQLite database with native C++ bindings first. Search, filtering, and edits happen instantly — no network round-trip, ever, for anything you've already saved.</p>
+        <p>Every pet profile, reminder, expense, and medical event is saved directly on your device first, built for speed from the ground up. Search, filtering, and edits happen instantly — no network round-trip, ever, for anything you've already saved.</p>
 
         <h3>2. Strict Multi-Tenant Isolation</h3>
-        <p>When you turn on sync, structured data goes to Cloud Firestore and media goes to a private Cloudflare R2 vault — each isolated by your Firebase Auth UID, enforced by production security rules, not just app-level checks.</p>
+        <p>When you turn on sync, your records go to our secure cloud database and your photos and documents go to a private, encrypted cloud vault — each one locked to your account and enforced at the server level, not just inside the app.</p>
 
         <h3>3. No Behavioral Trackers</h3>
         <p>PetKeeper contains no behavioral trackers and no analytics SDKs of any kind. We never watch what you do inside the app, and we never sell what's in it.</p>
